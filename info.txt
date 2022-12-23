@@ -1,0 +1,8 @@
+docker exec -it data_base_name mongosh
+
+to find data_base_name type >docker ps
+
+commands:
+use <db_name> -- creates database if not exist
+db.<db_name>.find() -- show objects in <db_name>
+db.<db_name>.insertOne({key: value}) 
