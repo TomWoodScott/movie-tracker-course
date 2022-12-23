@@ -6,3 +6,6 @@ commands:
 use <db_name> -- creates database if not exist
 db.<db_name>.find() -- show objects in <db_name>
 db.<db_name>.insertOne({key: value}) 
+db.movies.findOne({"year": {"$lt": 2000}})  -- return one movie with year lessthan 2000
+db.movies.deleteOne({"_id": ObjectID("643534534jkl34j3lk4j53q45")})  -- delete movie with _id = ...
+db.movies.updateOne({"_id": ObjectID("...")}, {$inc: {"year": -1}}) -- update movie with _id = .. to update year by -m 
