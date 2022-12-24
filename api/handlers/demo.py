@@ -1,7 +1,11 @@
 from fastapi import APIRouter
+from api.responses.detail import DetailResponse
 
-demo_router = APIRouter(prefix="/api/v1/demo")
+router = APIRouter(prefix="/api/v1/demo")
 
-
+@router.get("/", response_model=DetailResponse)
 def hello_world():
-    pass
+    '''
+    This is the hello world end point
+    '''
+    return DetailResponse(message="Hello World")
